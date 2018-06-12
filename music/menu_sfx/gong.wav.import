@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/gong.wav-be0670a5c26c016e4fd9814527ea0498.sample"
+
+[deps]
+
+source_file="res://music/menu_sfx/gong.wav"
+source_md5="7b262e95bdf213c26f7345ef10d81183"
+
+dest_files=[ "res://.import/gong.wav-be0670a5c26c016e4fd9814527ea0498.sample" ]
+dest_md5="c9d7c008d97851ec4c5f56566166f97b"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

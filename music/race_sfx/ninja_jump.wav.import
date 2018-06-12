@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ninja_jump.wav-acbba75fa362b4112cc4d84e8810f397.sample"
+
+[deps]
+
+source_file="res://music/race_sfx/ninja_jump.wav"
+source_md5="feb71613dc82a6420ab68e78fcae3a66"
+
+dest_files=[ "res://.import/ninja_jump.wav-acbba75fa362b4112cc4d84e8810f397.sample" ]
+dest_md5="07b7f3cd3cc8ec00c8fbf12cb2feab8d"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

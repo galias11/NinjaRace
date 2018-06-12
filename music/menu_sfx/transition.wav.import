@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/transition.wav-ad57764047a7042e76b8afa63c9b7fdc.sample"
+
+[deps]
+
+source_file="res://music/menu_sfx/transition.wav"
+source_md5="c078741bed83074d93642e556e7ad2b7"
+
+dest_files=[ "res://.import/transition.wav-ad57764047a7042e76b8afa63c9b7fdc.sample" ]
+dest_md5="189b206fd3cdf36a5f4df2657decc0b7"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

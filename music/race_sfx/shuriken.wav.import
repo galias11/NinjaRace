@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/shuriken.wav-8992eb5a4119a1c792a742214ee15e6c.sample"
+
+[deps]
+
+source_file="res://music/race_sfx/shuriken.wav"
+source_md5="2e645214825944b2115113426ea9fcb5"
+
+dest_files=[ "res://.import/shuriken.wav-8992eb5a4119a1c792a742214ee15e6c.sample" ]
+dest_md5="321d5c3f667375ea84428b9edee7bc67"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,2430 @@
+[gd_scene load_steps=44 format=2]
+
+[ext_resource path="res://scripts/Menu.gd" type="Script" id=1]
+[ext_resource path="res://assets/menu/MainMenu/fondo.png" type="Texture" id=2]
+[ext_resource path="res://assets/menu/MainMenu/luna.png" type="Texture" id=3]
+[ext_resource path="res://assets/menu/MainMenu/nube2.png" type="Texture" id=4]
+[ext_resource path="res://assets/menu/MainMenu/nube1.png" type="Texture" id=5]
+[ext_resource path="res://assets/menu/MainMenu/dojo.png" type="Texture" id=6]
+[ext_resource path="res://assets/menu/MainMenu/logo.png" type="Texture" id=7]
+[ext_resource path="res://assets/menu/MainMenu/jugar.png" type="Texture" id=8]
+[ext_resource path="res://assets/menu/MainMenu/multijugador.png" type="Texture" id=9]
+[ext_resource path="res://assets/menu/MainMenu/opciones.png" type="Texture" id=10]
+[ext_resource path="res://assets/menu/MainMenu/login.png" type="Texture" id=11]
+[ext_resource path="res://assets/menu/MainMenu/register.png" type="Texture" id=12]
+[ext_resource path="res://assets/menu/MainMenu/kunai.png" type="Texture" id=13]
+[ext_resource path="res://scripts/Level_SP.gd" type="Script" id=14]
+[ext_resource path="res://assets/menu/MainMenu/level_back.png" type="Texture" id=15]
+[ext_resource path="res://assets/menu/MainMenu/clock.png" type="Texture" id=16]
+[ext_resource path="res://fonts/font_30.tres" type="DynamicFont" id=17]
+[ext_resource path="res://scripts/Level_MP.gd" type="Script" id=18]
+[ext_resource path="res://assets/menu/MainMenu/players.png" type="Texture" id=19]
+[ext_resource path="res://fonts/special_font_30.tres" type="DynamicFont" id=20]
+[ext_resource path="res://scripts/Player_info.gd" type="Script" id=21]
+[ext_resource path="res://assets/menu/Mascaras.png" type="Texture" id=22]
+[ext_resource path="res://assets/menu/MainMenu/smoke_particle.png" type="Texture" id=23]
+[ext_resource path="res://assets/menu/MainMenu/save.png" type="Texture" id=24]
+[ext_resource path="res://music/taiko-drums.lite.ogg" type="AudioStream" id=25]
+[ext_resource path="res://music/menu_sfx/gong.wav" type="AudioStream" id=26]
+[ext_resource path="res://music/menu_sfx/level.wav" type="AudioStream" id=27]
+[ext_resource path="res://music/menu_sfx/transition.wav" type="AudioStream" id=28]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "Nubes_Fondo"
+length = 35.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Nube2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 20.1, 20.4, 21.4, 22.1, 34.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 574.691, 144.759 ), Vector2( 1299.74, 144.759 ), Vector2( 1323.81, -162.38 ), Vector2( -317.738, -142.832 ), Vector2( -268.479, 144.759 ), Vector2( 574.691, 144.759 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Nube5:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 30.4, 30.7, 31.2, 31.8, 34.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 121.621, 100.016 ), Vector2( 1314.93, 100.016 ), Vector2( 1332.66, -151.737 ), Vector2( -303.402, -125.418 ), Vector2( -211.869, 100.016 ), Vector2( 121.621, 100.016 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Nube3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 6.9, 7.1, 7.6, 8, 34.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 873.411, 183.926 ), Vector2( 1319.01, 183.926 ), Vector2( 1322.24, -150.906 ), Vector2( -292.387, -151.186 ), Vector2( -297.126, 183.926 ), Vector2( 873.411, 183.926 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Nube7:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 3.8, 4.4, 5.1, 5.5, 34.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1193.13, 163.099 ), Vector2( 1313.97, 163.099 ), Vector2( 1310.74, -146.557 ), Vector2( -292.838, -140.173 ), Vector2( -299.496, 163.099 ), Vector2( 1193.13, 163.099 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+
+resource_name = "Nubes_Frente"
+length = 50.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Nube1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 20.1, 20.7, 21.7, 22.8, 50 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 767.792, 140.508 ), Vector2( 1225.98, 140.508 ), Vector2( 1225.46, -86.0701 ), Vector2( -227.669, -86.4298 ), Vector2( -192.484, 140.508 ), Vector2( 767.792, 140.508 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Nube4:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 33.3, 33.8, 34.1, 34.5, 50 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 399.209, 143.026 ), Vector2( 1242.58, 143.026 ), Vector2( 1215.03, -86.0701 ), Vector2( -230.54, -98.6569 ), Vector2( -225.32, 143.026 ), Vector2( 399.209, 143.026 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Nube6:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 40, 40.2, 40.5, 41, 50 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 221.494, 144.218 ), Vector2( 1286.41, 144.218 ), Vector2( 1312.44, -137.746 ), Vector2( -300.013, -155.369 ), Vector2( -194.655, 144.218 ), Vector2( 221.494, 144.218 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+
+length = 1.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 85, 7 ), Vector2( 1, 7 ), Vector2( 85, 7 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+
+length = 1.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 85, 7 ), Vector2( 1, 7 ), Vector2( 85, 7 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+
+resource_name = "moving"
+length = 1.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 85, 7 ), Vector2( 1, 7 ), Vector2( 85, 7 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+
+length = 1.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 85, 7 ), Vector2( 1, 7 ), Vector2( 85, 7 ) ]
+}
+
+[sub_resource type="Gradient" id=7]
+
+offsets = PoolRealArray( 0, 1 )
+colors = PoolColorArray( 1, 1, 1, 0.806627, 1, 1, 1, 0 )
+
+[sub_resource type="GradientTexture" id=8]
+
+flags = 4
+gradient = SubResource( 7 )
+width = 2048
+
+[sub_resource type="ParticlesMaterial" id=9]
+
+render_priority = 0
+trail_divisor = 1
+emission_shape = 1
+emission_sphere_radius = 30.0
+flag_align_y = false
+flag_rotate_y = false
+flag_disable_z = true
+spread = 45.0
+flatness = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 1.0
+initial_velocity_random = 0.0
+angular_velocity = 20.0
+angular_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 0.0
+linear_accel_random = 0.0
+radial_accel = 50.0
+radial_accel_random = 0.0
+tangential_accel = 0.0
+tangential_accel_random = 0.0
+damping = 20.0
+damping_random = 0.2
+angle = 360.0
+angle_random = 1.0
+scale = 1.0
+scale_random = 0.0
+color_ramp = SubResource( 8 )
+hue_variation = 0.0
+hue_variation_random = 0.0
+anim_speed = 0.0
+anim_speed_random = 0.0
+anim_offset = 0.0
+anim_offset_random = 0.0
+anim_loop = false
+
+[sub_resource type="Animation" id=10]
+
+length = 5.0
+loop = true
+step = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 2.48425, 8.27261 ), Vector2( 4.87256, -22.7763 ), Vector2( -32.8607, 26.0176 ), Vector2( -13.5072, 40.7385 ), Vector2( 51.4993, 17.3326 ), Vector2( 58.8699, -13.7286 ), Vector2( 42.6205, -8.36062 ), Vector2( 21.3875, 2.23206 ) ]
+}
+
+[sub_resource type="Animation" id=11]
+
+resource_name = "MP_to_Waiting"
+length = 2.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1531.16, 302 ), Vector2( 2544.5, 302 ) ]
+}
+
+[sub_resource type="Animation" id=12]
+
+length = 2.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Main_Menu/Panel_Login:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ Vector2( 639, 190 ), Vector2( 639, -618 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Main_Menu/Panel_Login:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+
+length = 2.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 511, 302 ), Vector2( 1531.16, 302 ) ]
+}
+
+[sub_resource type="Animation" id=14]
+
+length = 2.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 511, 302 ), Vector2( -506.673, 302.186 ) ]
+}
+
+[sub_resource type="Animation" id=15]
+
+length = 2.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 511, 302 ), Vector2( 511, 1008.62 ) ]
+}
+
+[node name="NR_Menu" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="Main_Menu" type="Node2D" parent="." index="0"]
+
+_sections_unfolded = [ "Transform" ]
+
+[node name="Fondo" type="Sprite" parent="Main_Menu" index="0"]
+
+position = Vector2( 512.204, 277.521 )
+scale = Vector2( 0.31, 0.31 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Luna" type="Sprite" parent="Main_Menu" index="1"]
+
+position = Vector2( 842.3, 89.2495 )
+scale = Vector2( 0.292325, 0.292325 )
+texture = ExtResource( 3 )
+
+[node name="Nubes" type="Node2D" parent="Main_Menu" index="2"]
+
+editor/display_folded = true
+
+[node name="Nubes_Fondo" type="Node2D" parent="Main_Menu/Nubes" index="0"]
+
+editor/display_folded = true
+
+[node name="Nube2" type="Sprite" parent="Main_Menu/Nubes/Nubes_Fondo" index="0"]
+
+position = Vector2( 574.691, 144.759 )
+scale = Vector2( 0.418304, 0.418305 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Nube5" type="Sprite" parent="Main_Menu/Nubes/Nubes_Fondo" index="1"]
+
+position = Vector2( 121.621, 100.016 )
+scale = Vector2( 0.418304, 0.418305 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Nube3" type="Sprite" parent="Main_Menu/Nubes/Nubes_Fondo" index="2"]
+
+position = Vector2( 873.411, 183.926 )
+scale = Vector2( 0.38835, 0.38835 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Nube7" type="Sprite" parent="Main_Menu/Nubes/Nubes_Fondo" index="3"]
+
+position = Vector2( 1193.13, 163.099 )
+scale = Vector2( 0.38835, 0.38835 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Animation" type="AnimationPlayer" parent="Main_Menu/Nubes/Nubes_Fondo" index="4"]
+
+root_node = NodePath("..")
+autoplay = "Nubes_Fondo"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Nubes_Fondo = SubResource( 1 )
+blend_times = [  ]
+
+[node name="Nubes_frente" type="Node2D" parent="Main_Menu/Nubes" index="1"]
+
+editor/display_folded = true
+
+[node name="Nube1" type="Sprite" parent="Main_Menu/Nubes/Nubes_frente" index="0"]
+
+position = Vector2( 767.792, 140.508 )
+scale = Vector2( 0.307949, 0.307949 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Nube4" type="Sprite" parent="Main_Menu/Nubes/Nubes_frente" index="1"]
+
+position = Vector2( 399.209, 143.026 )
+scale = Vector2( 0.307949, 0.307949 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Nube6" type="Sprite" parent="Main_Menu/Nubes/Nubes_frente" index="2"]
+
+position = Vector2( 221.494, 144.218 )
+scale = Vector2( 0.38835, 0.38835 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Animation" type="AnimationPlayer" parent="Main_Menu/Nubes/Nubes_frente" index="3"]
+
+root_node = NodePath("..")
+autoplay = "Nubes_Frente"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Nubes_Frente = SubResource( 2 )
+blend_times = [  ]
+
+[node name="Dojo" type="Sprite" parent="Main_Menu" index="3"]
+
+position = Vector2( 372.333, 371.668 )
+scale = Vector2( 0.450837, 0.450837 )
+texture = ExtResource( 6 )
+
+[node name="Logo" type="Sprite" parent="Main_Menu" index="4"]
+
+position = Vector2( 842.496, 82.1622 )
+scale = Vector2( 0.23171, 0.23171 )
+texture = ExtResource( 7 )
+
+[node name="Jugar" type="TextureButton" parent="Main_Menu" index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 727.0
+margin_top = 206.0
+margin_right = 952.0
+margin_bottom = 315.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 8 )
+expand = true
+
+[node name="Multijugador" type="TextureButton" parent="Main_Menu" index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 652.0
+margin_top = 332.0
+margin_right = 1003.0
+margin_bottom = 440.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 9 )
+expand = true
+_sections_unfolded = [ "Textures" ]
+
+[node name="Opciones" type="TextureButton" parent="Main_Menu" index="7"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 691.0
+margin_top = 450.0
+margin_right = 970.0
+margin_bottom = 554.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 10 )
+expand = true
+
+[node name="Panel_Login" type="Panel" parent="Main_Menu" index="8"]
+
+self_modulate = Color( 0.238281, 0.185226, 0.185226, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 639.0
+margin_top = 190.0
+margin_right = 1012.0
+margin_bottom = 575.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Rect", "Visibility" ]
+
+[node name="Login" type="TextureButton" parent="Main_Menu/Panel_Login" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 142.0
+margin_top = 279.0
+margin_right = 251.0
+margin_bottom = 314.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 11 )
+expand = true
+_sections_unfolded = [ "Rect", "Textures" ]
+
+[node name="Register" type="TextureButton" parent="Main_Menu/Panel_Login" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 142.0
+margin_top = 334.0
+margin_right = 251.0
+margin_bottom = 369.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 12 )
+expand = true
+_sections_unfolded = [ "Rect", "Textures" ]
+
+[node name="User" type="LineEdit" parent="Main_Menu/Panel_Login" index="2"]
+
+self_modulate = Color( 1, 0.961121, 0.949219, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 50.0
+margin_top = 57.0
+margin_right = 333.0
+margin_bottom = 100.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+text = "user@example.com"
+focus_mode = 2
+context_menu_enabled = true
+placeholder_text = "Usuario"
+placeholder_alpha = 0.6
+caret_blink = false
+caret_blink_speed = 0.65
+caret_position = 0
+_sections_unfolded = [ "Placeholder", "Rect", "Visibility" ]
+
+[node name="Pass" type="LineEdit" parent="Main_Menu/Panel_Login" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 50.0
+margin_top = 129.0
+margin_right = 333.0
+margin_bottom = 172.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+text = "user"
+secret = true
+focus_mode = 2
+context_menu_enabled = true
+placeholder_text = "Contraseña"
+placeholder_alpha = 0.6
+caret_blink = false
+caret_blink_speed = 0.65
+caret_position = 0
+_sections_unfolded = [ "Placeholder", "Rect" ]
+
+[node name="Error" type="Label" parent="Main_Menu/Panel_Login" index="4"]
+
+visible = false
+self_modulate = Color( 0.972656, 0.898686, 0.296356, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 11.0
+margin_top = 199.0
+margin_right = 362.0
+margin_bottom = 237.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Usuario o Contraseña incorrectas"
+align = 1
+valign = 1
+autowrap = true
+uppercase = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Forgot_Pass" type="CheckBox" parent="Main_Menu/Panel_Login" index="5"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 50.0
+margin_top = 193.0
+margin_right = 253.0
+margin_bottom = 223.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "No recuerdo mi Contraseña"
+flat = false
+align = 0
+_sections_unfolded = [ "Rect" ]
+
+[node name="SP_Menu" type="Node2D" parent="." index="1"]
+
+position = Vector2( -1017.18, -3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Fondo" type="Sprite" parent="SP_Menu" index="0"]
+
+position = Vector2( 487.666, 280.807 )
+scale = Vector2( 0.326584, 0.31 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Titulo" type="Sprite" parent="SP_Menu" index="1"]
+
+visible = false
+position = Vector2( 935.424, 45.7446 )
+scale = Vector2( 0.382197, 0.382197 )
+texture = ExtResource( 8 )
+
+[node name="VolverSP" type="TextureButton" parent="SP_Menu" index="2"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 22.0
+margin_top = 7.0
+margin_right = 163.0
+margin_bottom = 56.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 13 )
+expand = true
+_sections_unfolded = [ "Rect" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SP_Menu/VolverSP" index="0"]
+
+root_node = NodePath("..")
+autoplay = "moving"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/moving = SubResource( 3 )
+blend_times = [  ]
+
+[node name="Sprite" type="Sprite" parent="SP_Menu" index="3"]
+
+position = Vector2( 526.652, 152.407 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Niveles" type="Node2D" parent="SP_Menu" index="4"]
+
+[node name="SP1" type="Area2D" parent="SP_Menu/Niveles" index="0"]
+
+editor/display_folded = true
+position = Vector2( 22.7436, 33 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 14 )
+_sections_unfolded = [ "Transform" ]
+title = "Nivel 1"
+
+[node name="Fondo" type="Sprite" parent="SP_Menu/Niveles/SP1" index="0"]
+
+position = Vector2( 112.788, 339.768 )
+scale = Vector2( 0.647228, 0.647228 )
+texture = ExtResource( 15 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SP_Menu/Niveles/SP1" index="1"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 55.2496, 96.4104, 204.707, 96.4104, 168.968, 574.026, 19.5096, 574.026 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Tiempo" type="Sprite" parent="SP_Menu/Niveles/SP1" index="2"]
+
+position = Vector2( 95.3299, 469.62 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 16 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Label" type="Label" parent="SP_Menu/Niveles/SP1" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 28.0
+margin_top = 521.0
+margin_right = 122.0
+margin_bottom = 544.0
+rect_scale = Vector2( 1.5, 1.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 17 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.910156, 0.893074, 0.856827, 1 )
+text = "-"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_fonts" ]
+
+[node name="Titulo" type="Label" parent="SP_Menu/Niveles/SP1" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 45.0
+margin_top = 247.0
+margin_right = 139.0
+margin_bottom = 335.0
+rect_scale = Vector2( 1.5, 1.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 17 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.925781, 0.9077, 0.9077, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 2
+custom_constants/shadow_as_outline = 1
+text = "NIVEL 1"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="SP2" type="Area2D" parent="SP_Menu/Niveles" index="1"]
+
+editor/display_folded = true
+position = Vector2( 208.196, 33 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 14 )
+title = "Nivel 2"
+
+[node name="Fondo" type="Sprite" parent="SP_Menu/Niveles/SP2" index="0"]
+
+position = Vector2( 112.788, 339.768 )
+scale = Vector2( 0.647228, 0.647228 )
+texture = ExtResource( 15 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SP_Menu/Niveles/SP2" index="1"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 55.2496, 96.4104, 204.707, 96.4104, 168.968, 574.026, 19.5096, 574.026 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Tiempo" type="Sprite" parent="SP_Menu/Niveles/SP2" index="2"]
+
+position = Vector2( 95.3299, 469.62 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 16 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Label" type="Label" parent="SP_Menu/Niveles/SP2" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 27.0
+margin_top = 522.0
+margin_right = 120.0
+margin_bottom = 545.0
+rect_scale = Vector2( 1.5, 1.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 17 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.910156, 0.893074, 0.856827, 1 )
+text = "-"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_fonts" ]
+
+[node name="Titulo" type="Label" parent="SP_Menu/Niveles/SP2" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 45.0
+margin_top = 247.0
+margin_right = 139.0
+margin_bottom = 335.0
+rect_scale = Vector2( 1.5, 1.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 17 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.925781, 0.9077, 0.9077, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 2
+custom_constants/shadow_as_outline = 1
+text = "NIVEL 1"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="SP3" type="Area2D" parent="SP_Menu/Niveles" index="2"]
+
+editor/display_folded = true
+position = Vector2( 390.558, 33 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 14 )
+title = "Nivel 3"
+
+[node name="Fondo" type="Sprite" parent="SP_Menu/Niveles/SP3" index="0"]
+
+position = Vector2( 112.788, 339.768 )
+scale = Vector2( 0.647228, 0.647228 )
+texture = ExtResource( 15 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SP_Menu/Niveles/SP3" index="1"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 55.2496, 96.4104, 204.707, 96.4104, 168.968, 574.026, 19.5096, 574.026 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Tiempo" type="Sprite" parent="SP_Menu/Niveles/SP3" index="2"]
+
+position = Vector2( 95.3299, 469.62 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 16 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Label" type="Label" parent="SP_Menu/Niveles/SP3" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 24.0
+margin_top = 523.0
+margin_right = 119.0
+margin_bottom = 546.0
+rect_scale = Vector2( 1.5, 1.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 17 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.910156, 0.893074, 0.856827, 1 )
+text = "-"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_fonts" ]
+
+[node name="Titulo" type="Label" parent="SP_Menu/Niveles/SP3" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 45.0
+margin_top = 247.0
+margin_right = 139.0
+margin_bottom = 335.0
+rect_scale = Vector2( 1.5, 1.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 17 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.925781, 0.9077, 0.9077, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 2
+custom_constants/shadow_as_outline = 1
+text = "NIVEL 1"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="SP4" type="Area2D" parent="SP_Menu/Niveles" index="3"]
+
+editor/display_folded = true
+position = Vector2( 576.01, 33 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 14 )
+title = "Nivel 4"
+
+[node name="Fondo" type="Sprite" parent="SP_Menu/Niveles/SP4" index="0"]
+
+position = Vector2( 112.788, 339.768 )
+scale = Vector2( 0.647228, 0.647228 )
+texture = ExtResource( 15 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SP_Menu/Niveles/SP4" index="1"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 55.2496, 96.4104, 204.707, 96.4104, 168.968, 574.026, 19.5096, 574.026 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Tiempo" type="Sprite" parent="SP_Menu/Niveles/SP4" index="2"]
+
+position = Vector2( 95.3299, 469.62 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 16 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Label" type="Label" parent="SP_Menu/Niveles/SP4" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 25.0
+margin_top = 524.0
+margin_right = 120.0
+margin_bottom = 547.0
+rect_scale = Vector2( 1.5, 1.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 17 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.910156, 0.893074, 0.856827, 1 )
+text = "-"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_fonts" ]
+
+[node name="Titulo" type="Label" parent="SP_Menu/Niveles/SP4" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 45.0
+margin_top = 247.0
+margin_right = 139.0
+margin_bottom = 335.0
+rect_scale = Vector2( 1.5, 1.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 17 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.925781, 0.9077, 0.9077, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 2
+custom_constants/shadow_as_outline = 1
+text = "NIVEL 1"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="SP5" type="Area2D" parent="SP_Menu/Niveles" index="4"]
+
+position = Vector2( 758.372, 33 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 14 )
+title = "Nivel 5"
+
+[node name="Fondo" type="Sprite" parent="SP_Menu/Niveles/SP5" index="0"]
+
+position = Vector2( 112.788, 339.768 )
+scale = Vector2( 0.647228, 0.647228 )
+texture = ExtResource( 15 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SP_Menu/Niveles/SP5" index="1"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 55.2496, 96.4104, 204.707, 96.4104, 168.968, 574.026, 19.5096, 574.026 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Tiempo" type="Sprite" parent="SP_Menu/Niveles/SP5" index="2"]
+
+position = Vector2( 95.3299, 469.62 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 16 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Label" type="Label" parent="SP_Menu/Niveles/SP5" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 27.0
+margin_top = 525.0
+margin_right = 122.0
+margin_bottom = 548.0
+rect_scale = Vector2( 1.5, 1.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 17 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.910156, 0.893074, 0.856827, 1 )
+text = "-"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_fonts" ]
+
+[node name="Titulo" type="Label" parent="SP_Menu/Niveles/SP5" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 45.0
+margin_top = 247.0
+margin_right = 139.0
+margin_bottom = 335.0
+rect_scale = Vector2( 1.5, 1.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 17 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.925781, 0.9077, 0.9077, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 2
+custom_constants/shadow_as_outline = 1
+text = "NIVEL 1"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="MP_Menu" type="Node2D" parent="." index="2"]
+
+editor/display_folded = true
+position = Vector2( 1013.66, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Fondo" type="Sprite" parent="MP_Menu" index="0"]
+
+position = Vector2( 513.402, 277.347 )
+scale = Vector2( 0.31, 0.31 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Titulo" type="Sprite" parent="MP_Menu" index="1"]
+
+position = Vector2( 845.522, 48.4979 )
+scale = Vector2( 0.359493, 0.359493 )
+texture = ExtResource( 9 )
+
+[node name="Luna" type="Sprite" parent="MP_Menu" index="2"]
+
+position = Vector2( 526.652, 152.407 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="VolverMP" type="TextureButton" parent="MP_Menu" index="3"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 85.0
+margin_top = 7.0
+margin_right = 242.0
+margin_bottom = 62.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 13 )
+expand = true
+_sections_unfolded = [ "Rect" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MP_Menu/VolverMP" index="0"]
+
+root_node = NodePath("..")
+autoplay = "moving"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/moving = SubResource( 4 )
+blend_times = [  ]
+
+[node name="Niveles" type="Node2D" parent="MP_Menu" index="4"]
+
+_sections_unfolded = [ "Z Index" ]
+
+[node name="MP1" type="Area2D" parent="MP_Menu/Niveles" index="0"]
+
+editor/display_folded = true
+position = Vector2( 34.1279, 33 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 18 )
+_sections_unfolded = [ "Transform" ]
+title = "Nivel 1"
+
+[node name="Fondo" type="Sprite" parent="MP_Menu/Niveles/MP1" index="0"]
+
+position = Vector2( 112.788, 339.768 )
+scale = Vector2( 0.647228, 0.647228 )
+texture = ExtResource( 15 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MP_Menu/Niveles/MP1" index="1"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 55.2496, 96.4104, 204.707, 96.4104, 168.968, 574.026, 19.5096, 574.026 )
+
+[node name="Icon" type="Sprite" parent="MP_Menu/Niveles/MP1" index="2"]
+
+position = Vector2( 94.6937, 476.189 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 19 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Players" type="Label" parent="MP_Menu/Niveles/MP1" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 29.0
+margin_top = 518.0
+margin_right = 123.0
+margin_bottom = 541.0
+rect_scale = Vector2( 1.5, 1.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 17 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.910156, 0.893074, 0.856827, 1 )
+text = "00:45"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_fonts" ]
+
+[node name="Titulo" type="Label" parent="MP_Menu/Niveles/MP1" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 47.0
+margin_top = 244.0
+margin_right = 141.0
+margin_bottom = 332.0
+rect_scale = Vector2( 1.5, 1.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 17 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.925781, 0.9077, 0.9077, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 2
+custom_constants/shadow_as_outline = 1
+text = "NIVEL 1"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="MP2" type="Area2D" parent="MP_Menu/Niveles" index="1"]
+
+editor/display_folded = true
+position = Vector2( 217.758, 33 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 18 )
+_sections_unfolded = [ "Transform" ]
+title = "Nivel 2"
+
+[node name="Fondo" type="Sprite" parent="MP_Menu/Niveles/MP2" index="0"]
+
+position = Vector2( 112.788, 339.768 )
+scale = Vector2( 0.647228, 0.647228 )
+texture = ExtResource( 15 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MP_Menu/Niveles/MP2" index="1"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 55.2496, 96.4104, 204.707, 96.4104, 168.968, 574.026, 19.5096, 574.026 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Icon" type="Sprite" parent="MP_Menu/Niveles/MP2" index="2"]
+
+position = Vector2( 94.6937, 476.189 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 19 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Players" type="Label" parent="MP_Menu/Niveles/MP2" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 29.0
+margin_top = 518.0
+margin_right = 123.0
+margin_bottom = 541.0
+rect_scale = Vector2( 1.5, 1.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 17 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.910156, 0.893074, 0.856827, 1 )
+text = "00:45"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_fonts" ]
+
+[node name="Titulo" type="Label" parent="MP_Menu/Niveles/MP2" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 47.0
+margin_top = 244.0
+margin_right = 141.0
+margin_bottom = 332.0
+rect_scale = Vector2( 1.5, 1.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 17 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.925781, 0.9077, 0.9077, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 2
+custom_constants/shadow_as_outline = 1
+text = "NIVEL 1"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="MP3" type="Area2D" parent="MP_Menu/Niveles" index="2"]
+
+editor/display_folded = true
+position = Vector2( 392.055, 33 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 18 )
+_sections_unfolded = [ "Transform" ]
+title = "Nivel 3"
+
+[node name="Fondo" type="Sprite" parent="MP_Menu/Niveles/MP3" index="0"]
+
+position = Vector2( 112.788, 339.768 )
+scale = Vector2( 0.647228, 0.647228 )
+texture = ExtResource( 15 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MP_Menu/Niveles/MP3" index="1"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 55.2496, 96.4104, 204.707, 96.4104, 168.968, 574.026, 19.5096, 574.026 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Icon" type="Sprite" parent="MP_Menu/Niveles/MP3" index="2"]
+
+position = Vector2( 94.6937, 476.189 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 19 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Players" type="Label" parent="MP_Menu/Niveles/MP3" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 29.0
+margin_top = 518.0
+margin_right = 123.0
+margin_bottom = 541.0
+rect_scale = Vector2( 1.5, 1.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 17 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.910156, 0.893074, 0.856827, 1 )
+text = "00:45"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_fonts" ]
+
+[node name="Titulo" type="Label" parent="MP_Menu/Niveles/MP3" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 47.0
+margin_top = 244.0
+margin_right = 141.0
+margin_bottom = 332.0
+rect_scale = Vector2( 1.5, 1.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 17 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.925781, 0.9077, 0.9077, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 2
+custom_constants/shadow_as_outline = 1
+text = "NIVEL 1"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="MP4" type="Area2D" parent="MP_Menu/Niveles" index="3"]
+
+editor/display_folded = true
+position = Vector2( 574.554, 33 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 18 )
+_sections_unfolded = [ "Transform" ]
+title = "Nivel 4"
+
+[node name="Fondo" type="Sprite" parent="MP_Menu/Niveles/MP4" index="0"]
+
+position = Vector2( 112.788, 339.768 )
+scale = Vector2( 0.647228, 0.647228 )
+texture = ExtResource( 15 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MP_Menu/Niveles/MP4" index="1"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 55.2496, 96.4104, 204.707, 96.4104, 168.968, 574.026, 19.5096, 574.026 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Icon" type="Sprite" parent="MP_Menu/Niveles/MP4" index="2"]
+
+position = Vector2( 94.6937, 476.189 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 19 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Players" type="Label" parent="MP_Menu/Niveles/MP4" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 29.0
+margin_top = 518.0
+margin_right = 123.0
+margin_bottom = 541.0
+rect_scale = Vector2( 1.5, 1.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 17 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.910156, 0.893074, 0.856827, 1 )
+text = "00:45"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_fonts" ]
+
+[node name="Titulo" type="Label" parent="MP_Menu/Niveles/MP4" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 47.0
+margin_top = 244.0
+margin_right = 141.0
+margin_bottom = 332.0
+rect_scale = Vector2( 1.5, 1.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 17 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.925781, 0.9077, 0.9077, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 2
+custom_constants/shadow_as_outline = 1
+text = "NIVEL 1"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="MP5" type="Area2D" parent="MP_Menu/Niveles" index="4"]
+
+editor/display_folded = true
+position = Vector2( 750.901, 33 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 18 )
+_sections_unfolded = [ "Transform" ]
+title = "Nivel 5"
+
+[node name="Fondo" type="Sprite" parent="MP_Menu/Niveles/MP5" index="0"]
+
+position = Vector2( 112.788, 339.768 )
+scale = Vector2( 0.647228, 0.647228 )
+texture = ExtResource( 15 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MP_Menu/Niveles/MP5" index="1"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 55.2496, 96.4104, 204.707, 96.4104, 168.968, 574.026, 19.5096, 574.026 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Icon" type="Sprite" parent="MP_Menu/Niveles/MP5" index="2"]
+
+position = Vector2( 94.6937, 476.189 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 19 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Players" type="Label" parent="MP_Menu/Niveles/MP5" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 29.0
+margin_top = 518.0
+margin_right = 123.0
+margin_bottom = 541.0
+rect_scale = Vector2( 1.5, 1.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 17 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.910156, 0.893074, 0.856827, 1 )
+text = "00:45"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_fonts" ]
+
+[node name="Titulo" type="Label" parent="MP_Menu/Niveles/MP5" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 47.0
+margin_top = 244.0
+margin_right = 141.0
+margin_bottom = 332.0
+rect_scale = Vector2( 1.5, 1.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 17 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.925781, 0.9077, 0.9077, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 2
+custom_constants/shadow_as_outline = 1
+text = "NIVEL 1"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="Espera" type="Node2D" parent="." index="3"]
+
+position = Vector2( 2028.32, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Fondo" type="Sprite" parent="Espera" index="0"]
+
+position = Vector2( 551.68, 280 )
+scale = Vector2( 0.332838, 0.31 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Titulo" type="Sprite" parent="Espera" index="1"]
+
+position = Vector2( 845.522, 48.4979 )
+scale = Vector2( 0.359493, 0.359493 )
+texture = ExtResource( 9 )
+
+[node name="Luna" type="Sprite" parent="Espera" index="2"]
+
+position = Vector2( 526.652, 152.407 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Volver_Wait" type="TextureButton" parent="Espera" index="3"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 85.0
+margin_top = 7.0
+margin_right = 242.0
+margin_bottom = 62.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 13 )
+expand = true
+_sections_unfolded = [ "Rect" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Espera/Volver_Wait" index="0"]
+
+root_node = NodePath("..")
+autoplay = "moving"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/moving = SubResource( 5 )
+blend_times = [  ]
+
+[node name="Mensaje" type="Label" parent="Espera" index="4"]
+
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 382.0
+margin_top = 70.0
+margin_right = 571.0
+margin_bottom = 187.0
+rect_scale = Vector2( 1.5, 1.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 17 )
+text = "Esperando jugadores"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility", "custom_fonts" ]
+
+[node name="Publicidad" type="Node2D" parent="Espera" index="5"]
+
+[node name="PanelContainer" type="PanelContainer" parent="Espera/Publicidad" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 24.0
+margin_top = 463.0
+margin_right = 1008.0
+margin_bottom = 623.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Rect" ]
+
+[node name="Label" type="Label" parent="Espera/Publicidad" index="1"]
+
+self_modulate = Color( 0.867188, 0.488163, 0.0846863, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 47.0
+margin_top = 499.0
+margin_right = 423.0
+margin_bottom = 532.0
+rect_scale = Vector2( 2.5, 2.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 20 )
+text = "Publicidad"
+align = 1
+uppercase = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility", "custom_fonts" ]
+
+[node name="Options_Menu" type="Node2D" parent="." index="4"]
+
+position = Vector2( -2, 746.75 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Fondo" type="Sprite" parent="Options_Menu" index="0"]
+
+position = Vector2( 496.739, 269.674 )
+scale = Vector2( 0.341534, 0.31 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Luna" type="Sprite" parent="Options_Menu" index="1"]
+
+position = Vector2( 872.401, 109.701 )
+scale = Vector2( 0.36464, 0.36464 )
+texture = ExtResource( 3 )
+
+[node name="Titulo" type="Sprite" parent="Options_Menu" index="2"]
+
+position = Vector2( 869.777, 97.3949 )
+scale = Vector2( 0.343958, 0.343958 )
+texture = ExtResource( 10 )
+
+[node name="VolverOPT" type="TextureButton" parent="Options_Menu" index="3"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 6.33649
+margin_top = 7.0
+margin_right = 157.336
+margin_bottom = 60.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 13 )
+expand = true
+_sections_unfolded = [ "Rect" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Options_Menu/VolverOPT" index="0"]
+
+root_node = NodePath("..")
+autoplay = "moving"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/moving = SubResource( 6 )
+blend_times = [  ]
+
+[node name="Player_info" type="Node2D" parent="Options_Menu" index="4"]
+
+position = Vector2( 406.201, 141.264 )
+script = ExtResource( 21 )
+
+[node name="Mask" type="Sprite" parent="Options_Menu/Player_info" index="0"]
+
+position = Vector2( 49.113, 18.9644 )
+z_index = 1
+z_as_relative = false
+texture = ExtResource( 22 )
+vframes = 4
+hframes = 4
+_sections_unfolded = [ "Animation", "Transform", "Z Index" ]
+
+[node name="Smoke" type="Particles2D" parent="Options_Menu/Player_info/Mask" index="0"]
+
+z_index = -1
+emitting = true
+amount = 64
+lifetime = 2.0
+one_shot = false
+preprocess = 0.1
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 9 )
+texture = ExtResource( 23 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Material", "Textures", "Transform", "Z Index" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Options_Menu/Player_info" index="1"]
+
+root_node = NodePath("../Mask")
+autoplay = "Errante"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Errante = SubResource( 10 )
+blend_times = [  ]
+
+[node name="Color_rwnd" type="TextureButton" parent="Options_Menu/Player_info" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -276.0
+margin_top = 53.0
+margin_right = -125.0
+margin_bottom = 106.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 13 )
+expand = true
+_sections_unfolded = [ "Rect", "Textures", "Visibility" ]
+
+[node name="Color_fwrd" type="TextureButton" parent="Options_Menu/Player_info" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 297.0
+margin_top = 112.0
+margin_right = 448.0
+margin_bottom = 165.0
+rect_rotation = 180.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 13 )
+expand = true
+_sections_unfolded = [ "Rect" ]
+
+[node name="Mask_rwnd" type="TextureButton" parent="Options_Menu/Player_info" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -238.0
+margin_top = -4.0
+margin_right = -87.0
+margin_bottom = 49.0
+rect_rotation = -0.18895
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 13 )
+expand = true
+_sections_unfolded = [ "Textures" ]
+
+[node name="Mask_fwrd" type="TextureButton" parent="Options_Menu/Player_info" index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 252.0
+margin_top = 47.0
+margin_right = 403.0
+margin_bottom = 100.0
+rect_rotation = -179.539
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 13 )
+expand = true
+_sections_unfolded = [ "Rect" ]
+
+[node name="LineEdit" type="LineEdit" parent="Options_Menu/Player_info" index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -78.0
+margin_top = 157.0
+margin_right = 164.0
+margin_bottom = 195.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+focus_mode = 2
+context_menu_enabled = true
+placeholder_text = "Nuevo NickName"
+placeholder_alpha = 0.6
+caret_blink = false
+caret_blink_speed = 0.65
+caret_position = 0
+_sections_unfolded = [ "Placeholder" ]
+
+[node name="Save" type="TextureButton" parent="Options_Menu/Player_info" index="7"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 355.0
+margin_top = 103.0
+margin_right = 539.0
+margin_bottom = 175.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 24 )
+_sections_unfolded = [ "Textures" ]
+
+[node name="Publicidad" type="Node2D" parent="Options_Menu" index="5"]
+
+editor/display_folded = true
+_sections_unfolded = [ "Transform" ]
+
+[node name="PanelContainer2" type="PanelContainer" parent="Options_Menu/Publicidad" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 22.0
+margin_top = 394.0
+margin_right = 1006.0
+margin_bottom = 554.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Rect" ]
+
+[node name="Label2" type="Label" parent="Options_Menu/Publicidad" index="1"]
+
+self_modulate = Color( 0.867188, 0.488163, 0.0846863, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 44.0
+margin_top = 426.0
+margin_right = 420.0
+margin_bottom = 459.0
+rect_scale = Vector2( 2.5, 2.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 20 )
+text = "Publicidad"
+align = 1
+uppercase = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility", "custom_fonts" ]
+
+[node name="Camera2D" type="Camera2D" parent="." index="5"]
+
+editor/display_folded = true
+position = Vector2( 511, 302 )
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = true
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.0
+drag_margin_top = 0.0
+drag_margin_right = 0.0
+drag_margin_bottom = 0.0
+editor_draw_screen = true
+editor_draw_limits = true
+editor_draw_drag_margin = true
+_sections_unfolded = [ "Editor", "Transform" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/MP_to_Waiting = SubResource( 11 )
+anims/login_to_main = SubResource( 12 )
+anims/main_to_MP = SubResource( 13 )
+anims/main_to_SP = SubResource( 14 )
+anims/main_to_options = SubResource( 15 )
+blend_times = [  ]
+
+[node name="Musica" type="AudioStreamPlayer2D" parent="Camera2D" index="1"]
+
+position = Vector2( 91.492, 302.041 )
+stream = ExtResource( 25 )
+volume_db = 0.12
+autoplay = true
+max_distance = 2000.0
+attenuation = 0.0
+bus = "Master"
+area_mask = 1
+
+[node name="Gong" type="AudioStreamPlayer2D" parent="Camera2D" index="2"]
+
+position = Vector2( 91.492, 302.041 )
+stream = ExtResource( 26 )
+volume_db = 0.01
+autoplay = false
+max_distance = 2000.0
+attenuation = 0.0
+bus = "Master"
+area_mask = 1
+
+[node name="Level" type="AudioStreamPlayer2D" parent="Camera2D" index="3"]
+
+position = Vector2( 91.492, 302.041 )
+stream = ExtResource( 27 )
+volume_db = 0.13
+autoplay = false
+max_distance = 2000.0
+attenuation = 0.0
+bus = "Master"
+area_mask = 1
+
+[node name="Transition" type="AudioStreamPlayer2D" parent="Camera2D" index="4"]
+
+position = Vector2( 91.492, 302.041 )
+stream = ExtResource( 28 )
+volume_db = 0.02
+autoplay = false
+max_distance = 2000.0
+attenuation = 0.0
+bus = "Master"
+area_mask = 1
+
+[connection signal="pressed" from="Main_Menu/Jugar" to="." method="_on_Jugar_pressed"]
+
+[connection signal="pressed" from="Main_Menu/Multijugador" to="." method="_on_Multijugador_pressed"]
+
+[connection signal="pressed" from="Main_Menu/Opciones" to="." method="_on_Opciones_pressed"]
+
+[connection signal="pressed" from="Main_Menu/Panel_Login/Login" to="." method="_on_Login_pressed"]
+
+[connection signal="pressed" from="Main_Menu/Panel_Login/Register" to="." method="_on_Register_pressed"]
+
+[connection signal="toggled" from="Main_Menu/Panel_Login/Forgot_Pass" to="." method="_on_Forgot_Pass_toggled"]
+
+[connection signal="pressed" from="SP_Menu/VolverSP" to="." method="_on_VolverSP_pressed"]
+
+[connection signal="input_event" from="SP_Menu/Niveles/SP1" to="." method="_on_SP1_input_event"]
+
+[connection signal="mouse_entered" from="SP_Menu/Niveles/SP1" to="SP_Menu/Niveles/SP1" method="_on_SP1_mouse_entered"]
+
+[connection signal="mouse_exited" from="SP_Menu/Niveles/SP1" to="SP_Menu/Niveles/SP1" method="_on_SP1_mouse_exited"]
+
+[connection signal="input_event" from="SP_Menu/Niveles/SP2" to="." method="_on_SP2_input_event"]
+
+[connection signal="mouse_entered" from="SP_Menu/Niveles/SP2" to="SP_Menu/Niveles/SP2" method="_on_SP1_mouse_entered"]
+
+[connection signal="mouse_exited" from="SP_Menu/Niveles/SP2" to="SP_Menu/Niveles/SP2" method="_on_SP1_mouse_exited"]
+
+[connection signal="input_event" from="SP_Menu/Niveles/SP3" to="." method="_on_SP3_input_event"]
+
+[connection signal="mouse_entered" from="SP_Menu/Niveles/SP3" to="SP_Menu/Niveles/SP3" method="_on_SP1_mouse_entered"]
+
+[connection signal="mouse_exited" from="SP_Menu/Niveles/SP3" to="SP_Menu/Niveles/SP3" method="_on_SP1_mouse_exited"]
+
+[connection signal="input_event" from="SP_Menu/Niveles/SP4" to="." method="_on_SP4_input_event"]
+
+[connection signal="mouse_entered" from="SP_Menu/Niveles/SP4" to="SP_Menu/Niveles/SP4" method="_on_SP1_mouse_entered"]
+
+[connection signal="mouse_exited" from="SP_Menu/Niveles/SP4" to="SP_Menu/Niveles/SP4" method="_on_SP1_mouse_exited"]
+
+[connection signal="input_event" from="SP_Menu/Niveles/SP5" to="." method="_on_SP5_input_event"]
+
+[connection signal="mouse_entered" from="SP_Menu/Niveles/SP5" to="SP_Menu/Niveles/SP5" method="_on_SP1_mouse_entered"]
+
+[connection signal="mouse_exited" from="SP_Menu/Niveles/SP5" to="SP_Menu/Niveles/SP5" method="_on_SP1_mouse_exited"]
+
+[connection signal="pressed" from="MP_Menu/VolverMP" to="." method="_on_VolverMP_pressed"]
+
+[connection signal="input_event" from="MP_Menu/Niveles/MP1" to="." method="_on_MP1_input_event"]
+
+[connection signal="mouse_entered" from="MP_Menu/Niveles/MP1" to="MP_Menu/Niveles/MP1" method="_on_MP1_mouse_entered"]
+
+[connection signal="mouse_exited" from="MP_Menu/Niveles/MP1" to="MP_Menu/Niveles/MP1" method="_on_MP1_mouse_exited"]
+
+[connection signal="input_event" from="MP_Menu/Niveles/MP2" to="." method="_on_MP2_input_event"]
+
+[connection signal="mouse_entered" from="MP_Menu/Niveles/MP2" to="MP_Menu/Niveles/MP2" method="_on_MP1_mouse_entered"]
+
+[connection signal="mouse_exited" from="MP_Menu/Niveles/MP2" to="MP_Menu/Niveles/MP2" method="_on_MP1_mouse_exited"]
+
+[connection signal="input_event" from="MP_Menu/Niveles/MP3" to="." method="_on_MP3_input_event"]
+
+[connection signal="mouse_entered" from="MP_Menu/Niveles/MP3" to="MP_Menu/Niveles/MP3" method="_on_MP1_mouse_entered"]
+
+[connection signal="mouse_exited" from="MP_Menu/Niveles/MP3" to="MP_Menu/Niveles/MP3" method="_on_MP1_mouse_exited"]
+
+[connection signal="input_event" from="MP_Menu/Niveles/MP4" to="." method="_on_MP4_input_event"]
+
+[connection signal="mouse_entered" from="MP_Menu/Niveles/MP4" to="MP_Menu/Niveles/MP4" method="_on_MP1_mouse_entered"]
+
+[connection signal="mouse_exited" from="MP_Menu/Niveles/MP4" to="MP_Menu/Niveles/MP4" method="_on_MP1_mouse_exited"]
+
+[connection signal="input_event" from="MP_Menu/Niveles/MP5" to="." method="_on_MP5_input_event"]
+
+[connection signal="mouse_entered" from="MP_Menu/Niveles/MP5" to="MP_Menu/Niveles/MP5" method="_on_MP1_mouse_entered"]
+
+[connection signal="mouse_exited" from="MP_Menu/Niveles/MP5" to="MP_Menu/Niveles/MP5" method="_on_MP1_mouse_exited"]
+
+[connection signal="pressed" from="Espera/Volver_Wait" to="." method="_on_Volver_Wait_pressed"]
+
+[connection signal="pressed" from="Options_Menu/VolverOPT" to="." method="_on_VolverOPT_pressed"]
+
+[connection signal="pressed" from="Options_Menu/Player_info/Color_rwnd" to="Options_Menu/Player_info" method="_on_Color_rwnd_pressed"]
+
+[connection signal="pressed" from="Options_Menu/Player_info/Color_fwrd" to="Options_Menu/Player_info" method="_on_Color_fwrd_pressed"]
+
+[connection signal="pressed" from="Options_Menu/Player_info/Mask_rwnd" to="Options_Menu/Player_info" method="_on_Mask_rwnd_pressed"]
+
+[connection signal="pressed" from="Options_Menu/Player_info/Mask_fwrd" to="Options_Menu/Player_info" method="_on_Mask_fwrd_pressed"]
+
+[connection signal="pressed" from="Options_Menu/Player_info/Save" to="." method="_on_Save_pressed"]
+
+

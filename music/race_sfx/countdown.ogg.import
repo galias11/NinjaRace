@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/countdown.ogg-d5970cc502cb3f966af964b941bde662.oggstr"
+
+[deps]
+
+source_file="res://music/race_sfx/countdown.ogg"
+source_md5="609c6a3bdabefe3d958cdf6499725e38"
+
+dest_files=[ "res://.import/countdown.ogg-d5970cc502cb3f966af964b941bde662.oggstr" ]
+dest_md5="57d9989caecfe819fe4cdc3d9a35fbb9"
+
+[params]
+
+loop=false
+loop_offset=0

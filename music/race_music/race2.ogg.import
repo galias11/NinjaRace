@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/race2.ogg-8bb57f1303102a0a502b310a7bd414b9.oggstr"
+
+[deps]
+
+source_file="res://music/race_music/race2.ogg"
+source_md5="5dc166f557c6f24a381ad231b8925790"
+
+dest_files=[ "res://.import/race2.ogg-8bb57f1303102a0a502b310a7bd414b9.oggstr" ]
+dest_md5="9567511dd8950122be4ca356e80d6628"
+
+[params]
+
+loop=true
+loop_offset=0

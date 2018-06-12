@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/taiko-drums.lite.ogg-2ceb3cc586fef5f61374876d309927cf.oggstr"
+
+[deps]
+
+source_file="res://music/taiko-drums.lite.ogg"
+source_md5="10d8bbe96bd4f555228997220c767c04"
+
+dest_files=[ "res://.import/taiko-drums.lite.ogg-2ceb3cc586fef5f61374876d309927cf.oggstr" ]
+dest_md5="480c5fcd07d526725d8770a230419394"
+
+[params]
+
+loop=true
+loop_offset=0

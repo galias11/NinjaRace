@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/level.wav-aaeb8eb4b8d6486d2588241801a1e558.sample"
+
+[deps]
+
+source_file="res://music/menu_sfx/level.wav"
+source_md5="98da167a29ccc84290665bc5b04eea65"
+
+dest_files=[ "res://.import/level.wav-aaeb8eb4b8d6486d2588241801a1e558.sample" ]
+dest_md5="d1eb2f8bfe420774d433317c922bb336"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
