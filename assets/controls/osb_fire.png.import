@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/analog_stick_bg_1.png-abdfab3f0d6cbadafa6c8df903284f65.stex"
+path="res://.import/osb_fire.png-2bef7949beed2ba525ea783faf4409d2.stex"
 
 [deps]
 
-source_file="res://assets/controls/analog_stick_bg_1.png"
-source_md5="6fab8eebe2ec48f194448b992830fade"
+source_file="res://assets/controls/osb_fire.png"
+source_md5="99a276197ee76a83312af783f33f0ab3"
 
-dest_files=[ "res://.import/analog_stick_bg_1.png-abdfab3f0d6cbadafa6c8df903284f65.stex" ]
-dest_md5="74be16e65f633046d343514fcc57178b"
+dest_files=[ "res://.import/osb_fire.png-2bef7949beed2ba525ea783faf4409d2.stex" ]
+dest_md5="977d51633748d45e85e4c7a214ade70e"
 
 [params]
 

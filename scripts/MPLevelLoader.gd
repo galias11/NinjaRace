@@ -18,7 +18,10 @@ func _onSetEnemies(data):
 	enemies = data
 	
 func _onSyncGame(timestamp):
-	get_tree().change_scene("res://scenes/Levels_Multi/Level" + str(levelId) + ".tscn")
+	var scene = ResourceLoader.load("res://scenes/Levels_Multi/Level" + str(levelId) + ".tscn")
+	var sceneInstance = scene.instance()
+	get_tree().get_root().add_child(sceneInstance)
+	get_tree().set_current_scene(sceneInstance)
 	
 func _ready():
 	Network.connect("syncGame", self, "_onSyncGame")

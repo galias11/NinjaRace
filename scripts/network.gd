@@ -13,7 +13,7 @@ signal network_ssl_handshake_error # Error in SSL handshake
 signal network_requesting          # Currently sending request
 signal network_body                # HTTP body received
 # Connection constants
-const HOST = "10.9.10.184"
+const HOST = "www.evansfelipe.com.ar"
 const PORT = 30030
 const BASIC_HEADERS = ["User-Agent: Ninja-Race/1.0", "Accept: */*"]
 # Connection variables
