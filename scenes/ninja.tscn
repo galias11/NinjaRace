@@ -105,7 +105,7 @@ tracks/0/keys = {
 "values": [ 30, 31, 32, 33, 34, 35, 36, 37, 38, 39 ]
 }
 
-[node name="Ninja" type="KinematicBody2D" index="0" groups=[
+[node name="Ninja" type="KinematicBody2D" groups=[
 "player",
 ]]
 
@@ -209,7 +209,8 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 [node name="Left" type="TouchScreenButton" parent="CanvasLayer" index="0"]
 
-position = Vector2( 47.8328, 490.915 )
+position = Vector2( 47.8328, 425.542 )
+scale = Vector2( 2, 2 )
 normal = ExtResource( 5 )
 pressed = null
 bitmask = null
@@ -218,11 +219,13 @@ shape_centered = true
 shape_visible = true
 passby_press = false
 action = "left"
-visibility_mode = 1
+visibility_mode = 0
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Right" type="TouchScreenButton" parent="CanvasLayer" index="1"]
 
-position = Vector2( 148.755, 491.338 )
+position = Vector2( 178.033, 423.749 )
+scale = Vector2( 2, 2 )
 normal = ExtResource( 6 )
 pressed = null
 bitmask = null
@@ -231,24 +234,28 @@ shape_centered = true
 shape_visible = true
 passby_press = false
 action = "right"
-visibility_mode = 1
+visibility_mode = 0
+_sections_unfolded = [ "Transform" ]
 
 [node name="Jump" type="TouchScreenButton" parent="CanvasLayer" index="2"]
 
-position = Vector2( 931.481, 430.495 )
+position = Vector2( 745.714, 422.734 )
+scale = Vector2( 2, 2 )
 normal = ExtResource( 7 )
 pressed = null
 bitmask = null
 shape = null
 shape_centered = true
 shape_visible = true
-passby_press = false
+passby_press = true
 action = "jump"
-visibility_mode = 1
+visibility_mode = 0
+_sections_unfolded = [ "Transform" ]
 
 [node name="Shoot" type="TouchScreenButton" parent="CanvasLayer" index="3"]
 
-position = Vector2( 845.885, 503.503 )
+position = Vector2( 874.776, 423.532 )
+scale = Vector2( 2, 2 )
 normal = ExtResource( 8 )
 pressed = null
 bitmask = null
@@ -257,6 +264,7 @@ shape_centered = true
 shape_visible = true
 passby_press = false
 action = "shoot"
-visibility_mode = 1
+visibility_mode = 0
+_sections_unfolded = [ "Transform" ]
 
 

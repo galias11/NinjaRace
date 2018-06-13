@@ -159,7 +159,7 @@ func _process(delta):
 		emit_signal("fall")
 	sprite.set_flip_h(true if direction == -1 else false)
 	
-	if is_playing:
+	if is_playing and Network.websocket != null:
 		Network.websocket.send(JSON.print({
 			"type": 7,
 			"payload": {
