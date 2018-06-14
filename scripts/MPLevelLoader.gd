@@ -30,8 +30,7 @@ func _onSetEnemies(data):
 	
 func _onSyncGame(timestamp):
 	
-	var root = get_tree().get_root()
-	root.get_child( root.get_child_count() -1 ).free()
+	get_tree().get_current_scene().free()
 	
 	var currentLevelInstance
 	
@@ -49,6 +48,19 @@ func _onSyncGame(timestamp):
 	get_tree().get_root().add_child(currentLevelInstance)
 	get_tree().set_current_scene(currentLevelInstance)
 	
+func finishGame():
+	get_tree().get_current_scene().queue_free()
+	if levelId == 1:
+		instance1 = level1.instance()
+	elif levelId == 2:
+		instance2 = level2.instance()
+	elif levelId == 3:
+		instance3 = level3.instance()
+	elif levelId == 4:
+		instance4 = level4.instance()
+	elif levelId == 5:
+		instance5 = level5.instance()
+
 func _ready():
 	Network.connect("syncGame", self, "_onSyncGame")
 	Network.connect("setEnemies", self, "_onSetEnemies")

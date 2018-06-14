@@ -112,6 +112,7 @@ func _on_Timer_timeout():
 
 #Replay Buttons
 func _on_Cancel_pressed():
+	MPLevelLoader.finishGame()
 	get_tree().change_scene("res://scenes/NR_Menu.tscn")
 
 func _on_Replay_pressed():
