@@ -35,31 +35,38 @@ var rope_timer = Timer.new()
 var shot_timer = Timer.new()
 var can_shot = true
 var can_rope = true
+var not_rope = false
 
 var p_animation = "idle"
 var n_animation = "idle"
 
 func _input(event):
+	not_rope = false
 	if is_playing:
 		if Input.is_action_just_pressed("jump") and is_on_floor():
+			not_rope = true
 			emit_signal("jump")
-		elif Input.is_action_just_pressed("rope"):
-			emit_signal("rope_started")
-		elif Input.is_action_just_released("rope"):
-			emit_signal("rope_released")
 		elif Input.is_action_just_pressed("shoot"):
+			not_rope = true
 			emit_signal("shot")
 		elif Input.is_action_just_pressed("right"):
+			not_rope = true
 			emit_signal("right")
 		elif Input.is_action_just_pressed("left"):
+			not_rope = true	
 			emit_signal("left")
 		elif Input.is_action_just_released("right") or Input.is_action_just_released("left"):
+			not_rope = true
 			if Input.is_action_pressed("right"):
 				emit_signal("right")
 			elif Input.is_action_pressed("left"):
 				emit_signal("left")
 			else:
 				emit_signal("idle")
+		elif Input.is_action_just_pressed("rope") and not not_rope:
+			emit_signal("rope_started")
+		elif Input.is_action_just_released("rope")and not not_rope:
+			emit_signal("rope_released")
 
 func compute_animation(previous = ""):
 	p_animation = previous if previous != "" else p_animation
