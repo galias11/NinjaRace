@@ -118,15 +118,15 @@ func _on_Jugar_pressed():
 	var levels = Network.getLevelData().payload.levelData
 	
 	if levels[0].has("personalRecord"):
-		get_node("SP_Menu/Niveles/SP1/Label").text = str(levels[0].personalRecord)
+		get_node("SP_Menu/Niveles/SP1/Label").text = str(ceil(int(levels[0].personalRecord) / 1000))
 	if levels[1].has("personalRecord"):	
-		get_node("SP_Menu/Niveles/SP2/Label").text = str(levels[1].personalRecord)
+		get_node("SP_Menu/Niveles/SP2/Label").text = str(ceil(int(levels[1].personalRecord) / 1000))
 	if levels[2].has("personalRecord"):
-		get_node("SP_Menu/Niveles/SP3/Label").text = str(levels[2].personalRecord)
+		get_node("SP_Menu/Niveles/SP3/Label").text = str(ceil(int(levels[2].personalRecord) / 1000))
 	if levels[3].has("personalRecord"):
-		get_node("SP_Menu/Niveles/SP4/Label").text = str(levels[3].personalRecord)
+		get_node("SP_Menu/Niveles/SP4/Label").text = str(ceil(int(levels[3].personalRecord) / 1000))
 	if levels[4].has("personalRecord"):
-		get_node("SP_Menu/Niveles/SP5/Label").text = str(levels[4].personalRecord)
+		get_node("SP_Menu/Niveles/SP5/Label").text = str(ceil(int(levels[4].personalRecord) / 1000))
 
 	
 	animation.play("main_to_SP")

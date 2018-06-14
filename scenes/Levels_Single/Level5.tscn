@@ -50,7 +50,7 @@ extents = Vector2( 22.6365, 26.5851 )
 position = Vector2( -180, 410 )
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
-level = 1
+level = 5
 
 [node name="Fondo" type="Sprite" parent="." index="0"]
 

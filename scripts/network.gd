@@ -162,11 +162,10 @@ func connect_user(route, email = "", pword = ""):
 	return response
 	
 func registerSPRecord(levelId, time):
-	var response = postHttp("/updateRecord", [], {
+	return postHttp("/updateRecord", [], {
 		"levelId": levelId,
 		"time": time
 	})
-	return response
 
 func getLevelData(levelId = null):
 	var route = "/levelData"

@@ -43,7 +43,7 @@ func _input(event):
 	if is_playing:
 		if Input.is_action_just_pressed("jump") and is_on_floor():
 			emit_signal("jump")
-		elif Input.is_action_just_pressed("rope") and can_rope:
+		elif Input.is_action_just_pressed("rope"):
 			emit_signal("rope_started")
 		elif Input.is_action_just_released("rope"):
 			emit_signal("rope_released")
@@ -216,15 +216,3 @@ func _ready():
 	rope_timer.set_wait_time(1)
 	rope_timer.connect("timeout", self, "on_rope_timer_timeout")
 	add_child(rope_timer)
-
-func _on_Left_pressed():
-	can_rope = false
-	var ev = InputEventAction.new()
-	ev.set_action("left")
-	ev.pressed = true
-	Input.parse_input_event(ev)
-	print("Hola")
-
-func _on_Left_released():
-	can_rope = true
-	print("cas")

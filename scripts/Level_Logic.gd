@@ -31,6 +31,8 @@ func _on_Goal_body_entered(body):
 		panel_end.get_node("Results").text = get_time()
 		panel_end.rect_position.y = IN
 		check_race_results()
+		
+		Network.registerSPRecord(level, ss * 1000)
 
 #Check with the server if there is a new Record for the level
 #TO_DO:

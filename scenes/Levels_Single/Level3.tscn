@@ -45,12 +45,12 @@ tracks/0/keys = {
 custom_solver_bias = 0.0
 extents = Vector2( 22.6365, 26.5851 )
 
-[node name="Level1" type="Node2D"]
+[node name="Level1" type="Node2D" index="0"]
 
 position = Vector2( -180, 410 )
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
-level = 1
+level = 3
 
 [node name="Fondo" type="Sprite" parent="." index="0"]
 
