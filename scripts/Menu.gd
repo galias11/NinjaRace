@@ -140,23 +140,19 @@ func _on_SP1_input_event(viewport, event, shape_idx):
 #Load Level 2
 func _on_SP2_input_event(viewport, event, shape_idx):
 	if (event is InputEventMouseButton && event.pressed):
-		#get_tree().change_scene("res://scenes/Levels_Single/Level2.tscn")
-		print("Me voy al nivel 2")
+		get_tree().change_scene("res://scenes/Levels_Single/Level2.tscn")
 #Load Level 3
 func _on_SP3_input_event(viewport, event, shape_idx):
 	if (event is InputEventMouseButton && event.pressed):
-		#get_tree().change_scene("res://scenes/Levels_Single/Level2.tscn")
-		print("Me voy al nivel 3")
+		get_tree().change_scene("res://scenes/Levels_Single/Level3.tscn")
 #Load Level 4
 func _on_SP4_input_event(viewport, event, shape_idx):
 	if (event is InputEventMouseButton && event.pressed):
-		#get_tree().change_scene("res://scenes/Levels_Single/Level2.tscn")
-		print("Me voy al nivel 4")
+		get_tree().change_scene("res://scenes/Levels_Single/Level4.tscn")
 #Load Level 5
 func _on_SP5_input_event(viewport, event, shape_idx):
 	if (event is InputEventMouseButton && event.pressed):
-		#get_tree().change_scene("res://scenes/Levels_Single/Level2.tscn")
-		print("Me voy al nivel 5")
+		get_tree().change_scene("res://scenes/Levels_Single/Level5.tscn")
 
 func loadMPLevel(data):
 	var levelId = int(data[0])

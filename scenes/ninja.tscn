@@ -209,7 +209,7 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 [node name="Left" type="TouchScreenButton" parent="CanvasLayer" index="0"]
 
-position = Vector2( 47.8328, 425.542 )
+position = Vector2( 48.0325, 423.749 )
 scale = Vector2( 2, 2 )
 normal = ExtResource( 5 )
 pressed = null
@@ -220,7 +220,7 @@ shape_visible = true
 passby_press = false
 action = "left"
 visibility_mode = 0
-_sections_unfolded = [ "Transform", "Z Index" ]
+_sections_unfolded = [ "Transform" ]
 
 [node name="Right" type="TouchScreenButton" parent="CanvasLayer" index="1"]
 
@@ -234,7 +234,7 @@ shape_centered = true
 shape_visible = true
 passby_press = false
 action = "right"
-visibility_mode = 0
+visibility_mode = 1
 _sections_unfolded = [ "Transform" ]
 
 [node name="Jump" type="TouchScreenButton" parent="CanvasLayer" index="2"]
@@ -249,7 +249,7 @@ shape_centered = true
 shape_visible = true
 passby_press = true
 action = "jump"
-visibility_mode = 0
+visibility_mode = 1
 _sections_unfolded = [ "Transform" ]
 
 [node name="Shoot" type="TouchScreenButton" parent="CanvasLayer" index="3"]
@@ -264,7 +264,11 @@ shape_centered = true
 shape_visible = true
 passby_press = false
 action = "shoot"
-visibility_mode = 0
+visibility_mode = 1
 _sections_unfolded = [ "Transform" ]
+
+[connection signal="pressed" from="CanvasLayer/Left" to="." method="_on_Left_pressed"]
+
+[connection signal="released" from="CanvasLayer/Left" to="." method="_on_Left_released"]
 
 

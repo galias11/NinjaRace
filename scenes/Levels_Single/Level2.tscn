@@ -1,20 +1,21 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://scripts/Level_Logic.gd" type="Script" id=1]
 [ext_resource path="res://assets/menu/MainMenu/fondo.png" type="Texture" id=2]
 [ext_resource path="res://assets/tileset.tres" type="TileSet" id=3]
-[ext_resource path="res://fonts/font_30.tres" type="DynamicFont" id=4]
-[ext_resource path="res://icon.png" type="Texture" id=5]
-[ext_resource path="res://assets/menu/3.png" type="Texture" id=6]
-[ext_resource path="res://assets/menu/2.png" type="Texture" id=7]
-[ext_resource path="res://assets/menu/1.png" type="Texture" id=8]
-[ext_resource path="res://music/race_sfx/countdown.ogg" type="AudioStream" id=9]
-[ext_resource path="res://music/race_music/race1.ogg" type="AudioStream" id=10]
-[ext_resource path="res://assets/menu/MainMenu/cancel.png" type="Texture" id=11]
-[ext_resource path="res://assets/menu/MainMenu/replay.png" type="Texture" id=12]
-[ext_resource path="res://scenes/destroyable.tscn" type="PackedScene" id=13]
-[ext_resource path="res://scenes/Fire.tscn" type="PackedScene" id=14]
-[ext_resource path="res://scenes/ninja.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/destroyable.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scripts/destroyable.gd" type="Script" id=5]
+[ext_resource path="res://fonts/font_30.tres" type="DynamicFont" id=6]
+[ext_resource path="res://icon.png" type="Texture" id=7]
+[ext_resource path="res://assets/menu/3.png" type="Texture" id=8]
+[ext_resource path="res://assets/menu/2.png" type="Texture" id=9]
+[ext_resource path="res://assets/menu/1.png" type="Texture" id=10]
+[ext_resource path="res://music/race_sfx/countdown.ogg" type="AudioStream" id=11]
+[ext_resource path="res://music/race_music/race1.ogg" type="AudioStream" id=12]
+[ext_resource path="res://assets/menu/MainMenu/cancel.png" type="Texture" id=13]
+[ext_resource path="res://assets/menu/MainMenu/replay.png" type="Texture" id=14]
+[ext_resource path="res://scenes/Fire.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/ninja.tscn" type="PackedScene" id=16]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -37,7 +38,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 1.6, 3.1, 4.6, 6.1 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ null, ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), null ]
+"values": [ null, ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), null ]
 }
 
 [sub_resource type="RectangleShape2D" id=3]
@@ -45,7 +46,7 @@ tracks/0/keys = {
 custom_solver_bias = 0.0
 extents = Vector2( 22.6365, 26.5851 )
 
-[node name="Level1" type="Node2D" index="0"]
+[node name="Level1" type="Node2D"]
 
 position = Vector2( -180, 410 )
 script = ExtResource( 1 )
@@ -102,6 +103,7 @@ tile_data = PoolIntArray(  )
 
 [node name="Horizontal" type="TileMap" parent="." index="3"]
 
+position = Vector2( -5.72021, 0 )
 mode = 0
 tile_set = ExtResource( 3 )
 cell_size = Vector2( 64, 64 )
@@ -118,10 +120,44 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray(  )
+tile_data = PoolIntArray( -4784107, 13, 0, -4784106, 536870925, 0, -4259816, 13, 0, -4259815, 536870926, 0, -4259814, 536870926, 0, -4259813, 536870926, 0, -4259812, 536870926, 0, -4259811, 536870926, 0, -4259810, 536870926, 0, -4259809, 536870926, 0, -4259808, 536870926, 0, -4259807, 536870926, 0, -4259806, 536870926, 0, -4259805, 536870926, 0, -4259804, 536870926, 0, -4259803, 536870926, 0, -4259802, 536870926, 0, -4259801, 536870926, 0, -4259800, 536870926, 0, -4259799, 536870926, 0, -4259798, 536870926, 0, -4259797, 536870925, 0, -4128757, 13, 0, -4128756, 536870925, 0, -3473405, 13, 0, -3473404, 536870925, 0, -3473375, 13, 0, -3473374, 536870925, 0, -2752515, 13, 0, -2752514, 536870925, 0, -2818014, 13, 0, -2818013, 536870925, 0, -2097162, 13, 0, -2097161, 536870925, 0, -2162654, 13, 0, -2162653, 536870925, 0, -1441810, 13, 0, -1441809, 536870925, 0, -1507296, 13, 0, -1507295, 536870925, 0, -786458, 13, 0, -786457, 536870925, 0, -851933, 13, 0, -851932, 536870925, 0, -131091, 13, 0, -131090, 536870925, 0, -196576, 13, 0, -196575, 536870925, 0 )
 _sections_unfolded = [ "Cell" ]
 
-[node name="Limits" type="StaticBody2D" parent="." index="4"]
+[node name="Destroyable2" type="StaticBody2D" parent="." index="4" groups=[
+"destroyable",
+] instance=ExtResource( 4 )]
+
+position = Vector2( 4433.64, -6380.89 )
+rotation = 1.5708
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 5 )
+_sections_unfolded = [ "Region", "Transform" ]
+size = 15
+
+[node name="Destroyable3" type="StaticBody2D" parent="." index="5" groups=[
+"destroyable",
+] instance=ExtResource( 4 )]
+
+position = Vector2( 5981.12, -6408.67 )
+rotation = 1.5708
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 5 )
+_sections_unfolded = [ "Region", "Transform" ]
+size = 14
+
+[node name="Limits" type="StaticBody2D" parent="." index="6"]
 
 editor/display_folded = true
 position = Vector2( -140.407, 0 )
@@ -161,7 +197,7 @@ scale = Vector2( 0.654345, 5.72451 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." index="5"]
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="7"]
 
 layer = 1
 offset = Vector2( 0, 0 )
@@ -186,7 +222,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 4 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
 custom_constants/shadow_offset_x = 2
@@ -202,7 +238,7 @@ _sections_unfolded = [ "Rect", "custom_colors", "custom_constants", "custom_font
 [node name="Sprite" type="Sprite" parent="CanvasLayer" index="1"]
 
 position = Vector2( 40, 50.4774 )
-texture = ExtResource( 5 )
+texture = ExtResource( 7 )
 
 [node name="Timer" type="Timer" parent="CanvasLayer" index="2"]
 
@@ -236,7 +272,7 @@ blend_times = [  ]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer" index="4"]
 
-stream = ExtResource( 9 )
+stream = ExtResource( 11 )
 volume_db = 0.0
 autoplay = true
 mix_target = 0
@@ -244,7 +280,7 @@ bus = "Master"
 
 [node name="music_race" type="AudioStreamPlayer" parent="CanvasLayer" index="5"]
 
-stream = ExtResource( 10 )
+stream = ExtResource( 12 )
 volume_db = 0.0
 autoplay = false
 mix_target = 0
@@ -286,7 +322,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 4 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0.972656, 0.972656, 0.972656, 1 )
 custom_constants/shadow_offset_x = 2
@@ -318,7 +354,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 4 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0.867188, 0.500258, 0.0711365, 1 )
 custom_constants/shadow_offset_x = 2
@@ -352,7 +388,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 11 )
+texture_normal = ExtResource( 13 )
 expand = true
 _sections_unfolded = [ "Rect", "Textures" ]
 
@@ -377,28 +413,13 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 12 )
+texture_normal = ExtResource( 14 )
 expand = true
 _sections_unfolded = [ "Textures" ]
 
-[node name="Destroyable2" parent="." index="6" instance=ExtResource( 13 )]
+[node name="Fire" parent="." index="8" instance=ExtResource( 15 )]
 
-position = Vector2( -2601.82, 286.041 )
-rotation = 1.5708
-_sections_unfolded = [ "Region", "Transform" ]
-size = 4
-
-[node name="Destroyable3" parent="." index="7" instance=ExtResource( 13 )]
-
-position = Vector2( -2461.92, 187.114 )
-rotation = 1.5708
-_sections_unfolded = [ "Region", "Transform" ]
-size = 4
-
-[node name="Fire" parent="." index="8" instance=ExtResource( 14 )]
-
-editor/display_folded = true
-position = Vector2( 7320.66, -3588.83 )
+position = Vector2( 2180, -4390 )
 scale = Vector2( 5, 5 )
 z_index = 1
 amount = 34
@@ -421,7 +442,7 @@ position = Vector2( 1.40411, -0.0837822 )
 scale = Vector2( 1.08126, 1.10689 )
 shape = SubResource( 3 )
 
-[node name="Ninja" parent="." index="9" instance=ExtResource( 15 )]
+[node name="Ninja" parent="." index="9" instance=ExtResource( 16 )]
 
 visible = false
 position = Vector2( -2130, 260 )
