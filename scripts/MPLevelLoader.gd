@@ -11,10 +11,15 @@ const WHITE = "ffffff"
 var arr_colors = [RED, ORANGE, BLUE, GREEN, YELLOW, PURPLE, BROWN, WHITE]
 
 var level1 = ResourceLoader.load("res://scenes/Levels_Multi/Level1.tscn")
+onready var instance1 = level1.instance()
 #var level2 = ResourceLoader.load("res://scenes/Levels_Multi/Level2.tscn")
+#onready instance2 = level2.instance()
 #var level3 = ResourceLoader.load("res://scenes/Levels_Multi/Level3.tscn")
+#onready instance3 = level3.instance()
 #var level4 = ResourceLoader.load("res://scenes/Levels_Multi/Level4.tscn")
+#onready instance4 = level4.instance()
 #var level5 = ResourceLoader.load("res://scenes/Levels_Multi/Level5.tscn")
+#onready instance5 = level5.instance()
 
 var levelId = null
 
@@ -31,15 +36,15 @@ func _onSyncGame(timestamp):
 	var currentLevelInstance
 	
 	if levelId == 1:
-		currentLevelInstance = level1.instance()
+		currentLevelInstance = instance1
 	#elif levelId == 2:
-	#	currentLevelInstane = level2.instance()
+	#	currentLevelInstane = instance2
 	#elif levelId == 3:
-	#	currentLevelInstane = level3.instance()
+	#	currentLevelInstane = instance3
 	#elif levelId == 4:
-	#	currentLevelInstane = level4.instance()
+	#	currentLevelInstane = instance4
 	#elif levelId == 5:
-	#	currentLevelInstane = level5.instance()
+	#	currentLevelInstane = instance5
 	
 	get_tree().get_root().add_child(currentLevelInstance)
 	get_tree().set_current_scene(currentLevelInstance)
