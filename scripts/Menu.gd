@@ -13,7 +13,17 @@ var new_color = 1
 func _ready():
 	if Network.is_connected:
 		var panel = get_node("Main_Menu/Panel_Login")
-		panel.rect_position = Vector2(0, -2000)	
+		panel.rect_position = Vector2(0, -2000)
+
+func getFormattedTime(ms):
+	var ss = ms / 1000
+	var cadena = ""
+	var mm = int(ss/60)
+	ss = ss % 60
+	if ss<10:
+		return str(mm)+":0"+str(ss)
+	else:
+		return str(mm)+":"+str(ss)
 
 func getEachMPLevelData():
 	var result = Network.getLevelData()
@@ -118,15 +128,15 @@ func _on_Jugar_pressed():
 	var levels = Network.getLevelData().payload.levelData
 	
 	if levels[0].has("personalRecord"):
-		get_node("SP_Menu/Niveles/SP1/Label").text = str(ceil(int(levels[0].personalRecord) / 1000))
+		get_node("SP_Menu/Niveles/SP1/Label").text = getFormattedTime(int(levels[0].personalRecord))
 	if levels[1].has("personalRecord"):	
-		get_node("SP_Menu/Niveles/SP2/Label").text = str(ceil(int(levels[1].personalRecord) / 1000))
+		get_node("SP_Menu/Niveles/SP2/Label").text = getFormattedTime(int(levels[1].personalRecord))
 	if levels[2].has("personalRecord"):
-		get_node("SP_Menu/Niveles/SP3/Label").text = str(ceil(int(levels[2].personalRecord) / 1000))
+		get_node("SP_Menu/Niveles/SP3/Label").text = getFormattedTime(int(levels[2].personalRecord))
 	if levels[3].has("personalRecord"):
-		get_node("SP_Menu/Niveles/SP4/Label").text = str(ceil(int(levels[3].personalRecord) / 1000))
+		get_node("SP_Menu/Niveles/SP4/Label").text = getFormattedTime(int(levels[3].personalRecord))
 	if levels[4].has("personalRecord"):
-		get_node("SP_Menu/Niveles/SP5/Label").text = str(ceil(int(levels[4].personalRecord) / 1000))
+		get_node("SP_Menu/Niveles/SP5/Label").text = getFormattedTime(int(levels[4].personalRecord))
 
 	
 	animation.play("main_to_SP")

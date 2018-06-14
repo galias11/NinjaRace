@@ -371,7 +371,7 @@ tracks/0/keys = {
 "values": [ Vector2( 511, 302 ), Vector2( 511, 1008.62 ) ]
 }
 
-[node name="NR_Menu" type="Node2D"]
+[node name="NR_Menu" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
